@@ -53,7 +53,7 @@ const MenuContainer = (props) => {
                 alt="social link icon"
               ></img>
             </span>
-            <span>Ссылка на соцсеть/мессенджер</span>
+            <a href="https://t.me/eminisaev">Ссылка на соцсеть/мессенджер</a>
           </a>
         </div>
       </div>

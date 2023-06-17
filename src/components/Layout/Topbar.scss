@@ -157,6 +157,10 @@
   color: $clr-primary-blue;
   font-weight: 500;
 
+  a {
+    color: $clr-primary-blue;
+  }
+
   &__icon {
     min-width: 4.8rem;
     min-height: 4.8rem;
