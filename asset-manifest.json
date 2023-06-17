@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ut-kit-page-task/static/css/main.c6aeebe8.css",
-    "main.js": "/ut-kit-page-task/static/js/main.b91d03ec.js",
+    "main.css": "/ut-kit-page-task/static/css/main.41a5ad8f.css",
+    "main.js": "/ut-kit-page-task/static/js/main.5e3ba361.js",
     "static/media/bg.jpg": "/ut-kit-page-task/static/media/bg.d79eb819a36343ff4d0c.jpg",
     "static/media/GraphikLCG-BoldItalic.eot": "/ut-kit-page-task/static/media/GraphikLCG-BoldItalic.b756b55712c56d3769ad.eot",
     "static/media/GraphikLCG-BoldItalic.ttf": "/ut-kit-page-task/static/media/GraphikLCG-BoldItalic.9fbcc2f7d820e0879b6b.ttf",
@@ -79,11 +79,11 @@
     "static/media/logo.svg": "/ut-kit-page-task/static/media/logo.c118df379fbd21d770efc4b661549647.svg",
     "index.html": "/ut-kit-page-task/index.html",
     "static/media/ico_menu.svg": "/ut-kit-page-task/static/media/ico_menu.47ac6afb2ace4b81fde084e9d63115e6.svg",
-    "main.c6aeebe8.css.map": "/ut-kit-page-task/static/css/main.c6aeebe8.css.map",
-    "main.b91d03ec.js.map": "/ut-kit-page-task/static/js/main.b91d03ec.js.map"
+    "main.41a5ad8f.css.map": "/ut-kit-page-task/static/css/main.41a5ad8f.css.map",
+    "main.5e3ba361.js.map": "/ut-kit-page-task/static/js/main.5e3ba361.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6aeebe8.css",
-    "static/js/main.b91d03ec.js"
+    "static/css/main.41a5ad8f.css",
+    "static/js/main.5e3ba361.js"
   ]
 }
