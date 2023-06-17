@@ -31,7 +31,6 @@ function EmailInput(props) {
   };
 
   const changeInputStateHandler = (eventType) => {
-    console.log(inputState);
     if (!inputIsValid) {
       return;
     }
