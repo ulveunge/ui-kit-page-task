@@ -15,6 +15,7 @@
 
   &__mobile-btn {
     display: none;
+    font-weight: 500;
 
     @include mq("tablet") {
       padding-top: 1.6rem;
@@ -57,6 +58,8 @@
   }
 
   &__link {
+    display: inline-block;
+    width: 100%;
     color: $clr-f-grey;
 
     &:hover {
