@@ -1,0 +1,11 @@
+@import "../../scss/mixins";
+
+.container {
+  max-width: 137.6rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+
+  @include mq("phone") {
+    padding: 0 2.4rem;
+  }
+}

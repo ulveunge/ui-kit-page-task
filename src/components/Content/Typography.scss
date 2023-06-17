@@ -1,0 +1,53 @@
+@import "../../scss/variables", "../../scss/mixins", "../../scss/animations";
+
+.typography {
+  &__title {
+    padding-bottom: 2.4rem;
+  }
+
+  &__text {
+    padding-bottom: 4.8rem;
+  }
+
+  &__tabs {
+    display: flex;
+    column-gap: 3.2rem;
+
+    @include mq("phablet") {
+      column-gap: 2.4rem;
+    }
+
+    border-bottom: 0.1rem solid #cbcbcc;
+  }
+
+  &__tab {
+    padding-bottom: 1.5rem;
+
+    position: relative;
+
+    button {
+      color: $clr-f-grey;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+    }
+
+    &.active {
+      button {
+        color: $clr-f-black;
+      }
+
+      &::after {
+        @include pseudo;
+        bottom: 0;
+        width: 100%;
+        height: 0.2rem;
+        background-color: $clr-primary-blue;
+        animation: tab-animation 0.3s ease;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 4.8rem;
+  }
+}

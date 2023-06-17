@@ -1,0 +1,63 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.btn {
+  max-width: 14.8rem;
+  padding: 1.6rem 3.2rem;
+  background: linear-gradient(45deg, #dd80ed 0%, #3d28e3 100%);
+  border-radius: 3.2rem;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    @include pseudo();
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+
+    background: linear-gradient(225deg, #dd80ed 0%, #3d28e3 100%);
+    border-radius: 3.2rem;
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &::after {
+    @include pseudo();
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    background: linear-gradient(206.57deg, #dd80ed 0%, #3d28e3 83.33%);
+    border-radius: 3.2rem;
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &.interactive:hover::before {
+    opacity: 1;
+  }
+
+  &.interactive:active::after {
+    opacity: 1;
+  }
+
+  &.hover {
+    background: linear-gradient(225deg, #dd80ed 0%, #3d28e3 100%);
+  }
+
+  &.active {
+    background: linear-gradient(206.57deg, #dd80ed 0%, #3d28e3 83.33%);
+  }
+
+  &[disabled] {
+    background: #cbcbcc;
+    cursor: default;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.typography-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.8rem;
+
+  &__item {
+    display: flex;
+    justify-content: first baseline;
+    column-gap: 3.2rem;
+
+    @include mq("phablet") {
+      flex-direction: column;
+      column-gap: 2.4rem;
+    }
+  }
+
+  &__name {
+    color: $clr-f-grey;
+    flex-basis: 28rem;
+
+    @include mq("phablet") {
+      flex-basis: auto;
+    }
+  }
+
+  &__value {
+    flex-basis: 59.2rem;
+
+    @include mq("phablet") {
+      flex-basis: auto;
+    }
+  }
+}

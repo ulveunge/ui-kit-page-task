@@ -1,0 +1,19 @@
+@import "./scss/reset", "./scss/fonts/fonts", "./scss/variables",
+  "./scss/mixins", "./scss/animations";
+
+.page {
+  background-color: #fff;
+
+  font-family: "Graphik LCG", Helvetica, Arial, sans-serif;
+
+  @include font-config(
+    $size: 1.6rem,
+    $colour: $clr-f-black,
+    $weight: 400,
+    $lh: 2.4rem
+  );
+}
+
+.section-padding {
+  padding-bottom: 8rem;
+}

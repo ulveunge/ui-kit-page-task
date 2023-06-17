@@ -1,0 +1,18 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  @include mq("tablet") {
+    padding-top: 3.2rem;
+  }
+
+  &__title {
+    padding-bottom: 1.6rem;
+  }
+
+  &__lead-text {
+    padding-bottom: 6.4rem;
+  }
+}

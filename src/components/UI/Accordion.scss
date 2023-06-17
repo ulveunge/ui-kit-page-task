@@ -1,0 +1,76 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.accordion {
+  position: relative;
+
+  max-width: 90.4rem;
+  display: flex;
+  flex-direction: column;
+  column-gap: 2.4rem;
+
+  border-bottom: 0.1rem solid #cbcbcc;
+
+  &::after {
+    @include pseudo();
+    bottom: -0.1rem;
+    width: 100%;
+    height: 0.1rem;
+    background-color: $clr-primary-blue;
+    transform: scaleX(0);
+    transform-origin: 0;
+    transition: all 0.3s ease;
+  }
+
+  &:not(&--disabled):hover::after {
+    transform: scaleX(1);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 500;
+
+    padding-bottom: 1.5rem;
+
+    cursor: pointer;
+  }
+
+  &__panel {
+    max-height: 0;
+    transform: scaleY(0);
+
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transform-origin: top;
+
+    p {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &--open {
+    &::after {
+      transform: scaleX(1);
+      height: 0.2rem;
+    }
+
+    .accordion__panel {
+      max-height: 50rem;
+      transform: scaleY(1);
+    }
+
+    .accordion__btn {
+      color: $clr-primary-blue;
+    }
+  }
+
+  &--disabled {
+    cursor: default;
+
+    .accordion__btn {
+      color: $clr-f-grey;
+      cursor: default;
+    }
+  }
+}

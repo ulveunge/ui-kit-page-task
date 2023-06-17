@@ -1,0 +1,50 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.radio {
+  display: flex;
+  column-gap: 1.6rem;
+
+  position: relative;
+
+  input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0.2rem solid $clr-primary-blue;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  input[type="radio"]::before {
+    content: "";
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: $clr-primary-blue;
+    border-radius: 50%;
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+  }
+
+  input[type="radio"]:checked::before {
+    opacity: 1;
+  }
+
+  input[disabled] {
+    border-color: #aeadae;
+  }
+
+  input[disabled] ~ span {
+    color: #494949;
+  }
+}

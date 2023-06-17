@@ -1,0 +1,49 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.grid {
+  &__title {
+    padding-bottom: 2.4rem;
+  }
+
+  &__text {
+    padding-bottom: 4.8rem;
+  }
+}
+
+.grid-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6.4rem;
+
+  &__title {
+    padding-bottom: 3.2rem;
+  }
+
+  &__info-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3.2rem;
+
+    @include mq("phablet") {
+      column-gap: 2.4rem;
+      justify-content: stretch;
+      flex-wrap: wrap;
+    }
+
+    max-width: 80rem;
+  }
+
+  &__info-item {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+
+    padding-bottom: 4.8rem;
+  }
+
+  &__info-name {
+    color: $clr-f-grey;
+  }
+}

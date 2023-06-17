@@ -1,0 +1,181 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.nav {
+  padding: 1.6rem 0 3.2rem 0;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+  }
+
+  &__fullname {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.fullname {
+  color: $clr-f-grey;
+
+  &__surname {
+    color: $clr-f-black;
+    font-weight: 500;
+  }
+}
+
+.menu {
+  &__container {
+    width: 100%;
+    height: 100vh;
+    padding: 0.8rem;
+
+    background-color: #384041;
+
+    position: fixed;
+
+    top: 0;
+
+    z-index: 9999;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 100;
+
+    width: 55%;
+    height: 100%;
+    padding: 2.4rem 5.6rem 4rem;
+
+    background-color: #fff;
+
+    @include mq("phablet") {
+      width: 100%;
+      padding: 2.4rem 5.6rem 4rem;
+    }
+
+    @include mq("phone") {
+      padding: 2.4rem;
+    }
+  }
+
+  &__row--1 {
+    display: flex;
+    align-items: center;
+    column-gap: 6.4rem;
+
+    span {
+      color: $clr-f-grey;
+    }
+
+    @include mq("phone") {
+      column-gap: 2.4rem;
+    }
+  }
+
+  &__row--2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+
+    height: 100%;
+    padding-left: calc(6.4rem + 4rem);
+
+    @include mq("phone") {
+      padding-left: calc(2.4rem + 4rem);
+    }
+  }
+
+  &__name {
+    margin-top: 6rem;
+  }
+
+  &__phone-number {
+    margin-top: 0.8rem;
+
+    color: $clr-f-black;
+    font-weight: 500;
+
+    &:hover {
+      color: $clr-primary-blue;
+    }
+  }
+
+  &__social-link {
+    margin-top: auto;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 3.2rem;
+    right: 6.4rem;
+    z-index: 200;
+
+    @include mq("phablet") {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #384041;
+      padding: 0.8rem;
+    }
+
+    @include mq("phone") {
+      right: 2.4rem;
+    }
+  }
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  column-gap: 2.4rem;
+
+  color: $clr-primary-blue;
+  font-weight: 500;
+
+  &__icon {
+    min-width: 4.8rem;
+    min-height: 4.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}

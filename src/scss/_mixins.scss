@@ -1,0 +1,66 @@
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+$breakpoints: (
+  // "phone": 400px,
+  // "phone-wide": 480px,
+  // "phablet": 560px,
+  // "tablet-small": 640px,
+  // "tablet": 768px,
+  // "tablet-wide": 1024px,
+  // "desktop": 1248px,
+  // "desktop-wide": 1440px,
+  "phone": 560px,
+  "phablet": 732px,
+  "tablet": 980px,
+  "desktop": 1200px
+);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin font-config($size: false, $colour: false, $weight: false, $lh: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+// @include mq("tablet-wide") {
+//   color: red;
+// }
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.checkbox {
+  display: flex;
+  column-gap: 1.6rem;
+
+  position: relative;
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0.2rem solid $clr-primary-blue;
+
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]::before {
+    @include pseudo($pos: static);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    background-color: $clr-primary-blue;
+
+    transition: opacity 0.2s ease;
+  }
+
+  &__icon {
+    align-self: center;
+    position: absolute;
+    transform: translateX(0.45rem);
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+  }
+
+  input[type="checkbox"]:checked::before {
+    opacity: 1;
+  }
+
+  input[type="checkbox"]:checked + &__icon {
+    opacity: 1;
+  }
+
+  input[disabled] {
+    border-color: #aeadae;
+  }
+
+  input[disabled] ~ span {
+    color: #494949;
+  }
+}
